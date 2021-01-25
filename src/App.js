@@ -5,9 +5,9 @@ import Home from "./components/Home";
 // Components
 import ProductList from "./components/ProductList";
 import ProductDetail from "./components/ProductDetail";
+import products from "./products";
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-
 const theme = {
   light: {
     mainColor: "#242424", // main font color
@@ -29,12 +29,26 @@ function App() {
   const toggleTheme = () =>
     setCurrentTheme(currentTheme === "light" ? "dark" : "light");
 
+  const [_products, setProducts] = useState(products);
+
+  const deleteProduct = (productId) => {
+    const updatedProducts = _products.filter(
+      (product) => product.id !== productId
+    );
+    setProducts(updatedProducts);
+  };
+
   const [product, setProduct] = useState(null);
   const display = product ? (
     <ProductDetail product={product} setProduct={setProduct} />
   ) : (
-    <ProductList setProduct={setProduct} />
+    <ProductList
+      products={_products}
+      deleteProduct={deleteProduct}
+      setProduct={setProduct}
+    />
   );
+
   return (
     <ThemeProvider theme={theme[currentTheme]}>
       <GlobalStyle />
