@@ -8,7 +8,9 @@ const ProductDetail = (props) => {
       <img src={product.image} alt={product.name} />
       <p>{product.description}</p>
       <p>{product.price} KD </p>
-      <ThemeButton onClick={() => props.setProduct(null)}>Back</ThemeButton>
+      <ThemeButton className="detail" onClick={() => props.setProduct(null)}>
+        Back
+      </ThemeButton>
     </DetailWrapper>
   );
 };

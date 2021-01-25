@@ -11,13 +11,20 @@ export const DetailWrapper = styled.div`
   width: 80%;
 
   img {
-    width: 40%;
+    width: 35%;
     float: left;
     margin-bottom: 2%;
+    padding-right: 2%;
   }
 
   p {
     vertical-align: middle;
+  }
+
+  h1 {
+    margin-top: 2%;
+    font-size: 120%;
+    text-align: left;
   }
 `;
 
