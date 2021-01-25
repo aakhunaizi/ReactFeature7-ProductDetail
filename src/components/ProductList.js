@@ -10,7 +10,9 @@ import { useState } from "react";
 const ProductList = (props) => {
   const [query, setQuery] = useState("");
   const productList = products
-    .filter((product) => product.name.includes(query))
+    .filter((product) =>
+      product.name.toLowerCase().includes(query.toLowerCase())
+    )
     .map((product) => (
       <ProductItem
         product={product}
