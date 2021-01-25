@@ -40,7 +40,11 @@ function App() {
 
   const [product, setProduct] = useState(null);
   const display = product ? (
-    <ProductDetail product={product} setProduct={setProduct} />
+    <ProductDetail
+      deleteProduct={deleteProduct}
+      product={product}
+      setProduct={setProduct}
+    />
   ) : (
     <ProductList
       products={_products}

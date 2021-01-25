@@ -75,10 +75,35 @@ export const ShopImage = styled.img`
 export const ThemeButton = styled.button`
   font-size: 1em;
   margin: 1.25em;
+  padding: 16px 32px;
+  text-align: center;
   padding: 0.25em 1em;
   border-radius: 3px;
   background-color: ${(props) => props.theme.mainColor};
   color: ${(props) => props.theme.backgroundColor};
+`;
+
+export const BackButton = styled.button`
+  background-color: ${(props) => props.theme.backgroundColor};
+  color: ${(props) => props.theme.mainColor};
+  border: 2px solid ${(props) => props.theme.mainColor};
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  float: left;
+  margin-right: 1%;
+
+  &:hover {
+    background-color: ${(props) => props.theme.mainColor};
+    color: ${(props) => props.theme.backgroundColor};
+  }
 `;
 
 export const Title = styled.h1`
@@ -99,6 +124,29 @@ export const DeleteButtonStyled = styled.button`
   cursor: pointer;
   margin: 0 auto;
   display: block;
+
+  &:hover {
+    background-color: #f44336;
+    color: white;
+  }
+`;
+
+export const DeleteButtonStyledDetailed = styled.button`
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  float: left;
+
   &:hover {
     background-color: #f44336;
     color: white;
