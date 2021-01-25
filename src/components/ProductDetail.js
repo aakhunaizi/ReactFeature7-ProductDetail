@@ -1,12 +1,13 @@
 import { DetailWrapper } from "../styles";
 
-const ProductDetail = () => {
+const ProductDetail = (props) => {
+  const { name, price, image, description } = props;
   return (
     <DetailWrapper>
-      <h1>I should be a product name</h1>
-      <img src="I should be a product image" alt="I should be a product name" />
-      <p>I should be a product description</p>
-      <p>I should be a product price</p>
+      <h1>{name}</h1>
+      <img src={image} alt={name} />
+      <p>{description}</p>
+      <p>{price}</p>
     </DetailWrapper>
   );
 };
