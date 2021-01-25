@@ -84,3 +84,23 @@ export const ThemeButton = styled.button`
 export const Title = styled.h1`
   text-align: center;
 `;
+
+export const DeleteButtonStyled = styled.button`
+  background-color: white;
+  color: black;
+  border: 2px solid #f44336;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  &:hover {
+    background-color: #f44336;
+    color: white;
+  }
+`;
